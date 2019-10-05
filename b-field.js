@@ -4,11 +4,11 @@ class bField {
 		strength: true
 	};
 
-	strength;
+	strength; // [strength] = mH
 	direction; // false -> Into the dispaly; true -> Out of the display
-	constructor(initial_strength, initial_direction) {
-		this.strength = initial_strength;
-		this.direction = initial_direction;
+	constructor({ strength, direction }) {
+		this.strength = strength;
+		this.direction = direction;
 	}
 
 	setStrength(value) {
@@ -42,6 +42,16 @@ class bField {
 			text(`B = ${this.strength}mH`, windowWidth - 60, 16);
 		}
 	}
+
+	getInteraction(charge) {
+		return createVector(-2, 1);
+		if (charge == 0) return createVector(0, 0);
+		if (charge == -1) return this.direction ? createVector(-1, 0) : createVector(+1, 0);
+		if (charge == 1) return this.direction ? createVector(+1, 0) : createVector(-1, 0);
+	}
 }
 
-var magneticField = new bField(10, false);
+var magneticField = new bField({
+	strength: 10,
+	direction: false
+});

@@ -4,4 +4,9 @@ function draw() {
 
 	// Render bField
 	magneticField.render();
+	activeParticles.forEach(particle => {
+		if (typeof particle.render == 'function') {
+			particle.render();
+		}
+	});
 }

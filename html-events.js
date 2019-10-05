@@ -8,6 +8,14 @@ const fireButton = document.getElementById('fireButton');
 const fireSound = new Audio('src/fire.mp3');
 fireButton.addEventListener('click', () => {
 	fireSound.play();
+	activeParticles.push(
+		new Kaon({
+			direction: createVector(0, -1),
+			velocity: 10,
+			position: createVector(Math.random() * windowWidth, windowHeight),
+			charge: -1
+		})
+	);
 });
 
 // Change settings of magnetic field
