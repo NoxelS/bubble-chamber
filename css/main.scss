@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+html {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: 'Red Hat Display', sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	flex-direction: row;
+	height: 6vh;
+	background-color: #333;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 2rem;
+	h3 {
+		color: #fff;
+		font-weight: 550;
+		font-size: 1.4em;
+		small {
+			color: #058ed9;
+			font-weight: 500;
+			font-size: 0.5em;
+			a {
+				color: inherit;
+				&:link {
+					color: inherit;
+					text-decoration: none;
+				}
+				&:hover {
+					opacity: 0.5;
+				}
+			}
+		}
+	}
+	svg {
+		width: 21px;
+		height: auto;
+		color: #058ed9;
+		cursor: pointer;
+		&:hover {
+			color: #fff;
+		}
+	}
+	.settings-svg {
+		width: 25px;
+		height: auto;
+	}
+}
+
+.settings {
+	display: none;
+	position: absolute;
+	top: 6vh;
+	left: 0;
+	height: 94vh;
+	width: 15vw;
+	overflow-y: auto;
+
+	padding: 0 1rem;
+
+	transition: all 0.5s ease-in-out;
+
+	background-color: #333;
+	h3 {
+		color: #fff;
+		font-weight: 1;
+		font-size: 1.1em;
+		margin-bottom: 0;
+	}
+	.line {
+		width: 100%;
+		height: 1.5px;
+		margin-top: 0.3rem;
+		margin-bottom: 0.7rem;
+		background-color: #058ed9;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		row-gap: 0.5rem;
+
+		color: #fff;
+		font-weight: normal;
+		font-size: 0.9em;
+	}
+}
+.open {
+	display: flex;
+	flex-direction: column;
+	width: 15vw;
+}
+
+.fire-button {
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	bottom: 1rem;
+	right: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	svg {
+		width: 45px;
+		height: auto;
+		color: #058ed9;
+	}
+	&:hover {
+		svg {
+			width: 55px;
+			height: auto;
+			color: #0556d9;
+		}
+	}
+	.onFire {
+		width: 55px;
+		height: auto;
+		color: #0556d9;
+	}
+}
