@@ -44,14 +44,13 @@ class bField {
 	}
 
 	getInteraction(charge) {
-		return createVector(-2, 1);
-		if (charge == 0) return createVector(0, 0);
 		if (charge == -1) return this.direction ? createVector(-1, 0) : createVector(+1, 0);
 		if (charge == 1) return this.direction ? createVector(+1, 0) : createVector(-1, 0);
+		return createVector(0, 0);
 	}
 }
 
 var magneticField = new bField({
-	strength: 10,
+	strength: 5,
 	direction: false
 });

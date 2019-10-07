@@ -59,7 +59,7 @@ header {
 	top: 6vh;
 	left: 0;
 	height: 94vh;
-	width: 15vw;
+	width: 25vw;
 	overflow-y: auto;
 
 	padding: 0 1rem;
@@ -82,7 +82,7 @@ header {
 	}
 	.grid {
 		display: grid;
-		grid-template-columns: 50% 50%;
+		grid-template-columns: 60% 40%;
 		row-gap: 0.5rem;
 
 		color: #fff;

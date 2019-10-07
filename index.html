@@ -12,8 +12,13 @@
 		<script src="b-field.js"></script>
 		<script src="sketch.js"></script>
 		<script src="draw.js"></script>
-		<script src="particle/k.js"></script>
-		<script src="particle/particles.js"></script>
+		<script src="particle/particle.js"></script>
+		<script src="particle/muon.js"></script>
+		<script src="particle/neutrino.js"></script>
+		<script src="particle/kaon.js"></script>
+		<script src="particle/proton.js"></script>
+		<script src="particle/pion.js"></script>
+		<script src="particle/electron.js"></script>
 	</head>
 	<body>
 		<header>
@@ -90,13 +95,28 @@
 					/>
 				</div>
 				<span>Direction: </span>
-				<label class="container">
-					<input type="checkbox" checked="checked" onchange="" />
-					<span class="checkmark"></span>
-				</label>
+				<button id="magneticFieldDirection">In</button>
 			</div>
 			<h3>Particle</h3>
 			<div class="line"></div>
+			<div class="grid">
+				<span>Show neutral traces: </span>
+				<label class="container">
+					<input type="checkbox" onchange="toggleParticleSettings('traces')" />
+					<span class="checkmark"></span>
+				</label>
+
+				<span>Show particle names: </span>
+				<label class="container">
+					<input type="checkbox" onchange="toggleParticleSettings('names')" />
+					<span class="checkmark"></span>
+				</label>
+				<span>Color mode: </span>
+				<label class="container">
+					<input type="checkbox" onchange="toggleParticleSettings('colors')" />
+					<span class="checkmark"></span>
+				</label>
+			</div>
 		</div>
 		<div class="fire-button" id="fireButton">
 			<svg
